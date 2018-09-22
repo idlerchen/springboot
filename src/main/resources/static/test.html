@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<!-- start: Meta -->
+		<meta charset="utf-8">
+		<title>Bootstrap Metro Dashboard by Dennis Ji for ARM demo</title>
+		<meta name="description" content="Bootstrap Metro Dashboard">
+		<meta name="author" content="Dennis Ji">
+		<meta name="keyword" content="Metro, Metro UI, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+		<!-- end: Meta -->
+
+		<!-- start: Mobile Specific -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- end: Mobile Specific -->
+
+		<!-- start: CSS -->
+		<link id="bootstrap-style" href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+		<link id="base-style" href="css/style.css" rel="stylesheet">
+		<link id="base-style-responsive" href="css/style-responsive.css" rel="stylesheet">
+		<!-- end: CSS -->
+
+		<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+	  	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<link id="ie-style" href="css/ie.css" rel="stylesheet">
+	<![endif]-->
+
+		<!--[if IE 9]>
+		<link id="ie9style" href="css/ie9.css" rel="stylesheet">
+	<![endif]-->
+
+		<!-- start: Favicon -->
+		<link rel="shortcut icon" href="img/favicon.ico">
+		<!-- end: Favicon -->
+
+	</head>
+
+	<body>
+	<label class="control-label" for="textarea2">描述</label>
+	<div class="controls">
+		<div id="div1" class="toolbar1"></div>
+		<div id="div2" class="text1"></div>
+	</div>
+		<!-- start: JavaScript-->
+
+		<script src="js/common/jquery-1.9.1.min.js"></script>
+		<script src="js/common/wangEditor.min.js"></script>
+		<script>
+		var E = window.wangEditor
+		var editor = new E('#div1', '#div2'); // 两个参数也可以传入 elem 对象，class 选择器，此前参数为tools栏和文本框栏
+		editor.customConfig.showLinkImg = false;
+		editor.customConfig.uploadImgServer ="course/upload.do";
+		editor.customConfig.uploadImgMaxLength = 5;
+		editor.customConfig.uploadFileName = 'file';
+		editor.customConfig.uploadImgHeaders = {
+			'Accept': 'multipart/form-data'
+		};
+		editor.create();
+		</script>
+	</body>
+
+</html>
